@@ -82,10 +82,12 @@ python main.py -a remove -m Student --id 5
 
 # Проект готовий до використання:
 
-- Docker PostgreSQL працює
+- Docker та PostgreSQL працює
 
 - Таблиці створені
 
 - Дані наповнені Faker
 
 - Тестувати SQLAlchemy-запити
+
+- Застосувати додаткові запити
