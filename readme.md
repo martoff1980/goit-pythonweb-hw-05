@@ -36,70 +36,56 @@ python seed.py
 
 alembic init alembic
 
-# Налаштувати alembic.ini (SQLAlchemy URL) та env.py (імпорт Base)
-
-# Створити міграцію
+Створити міграцію:
 
 alembic revision --autogenerate -m "Initial migration"
 
-# Застосувати міграцію
+Застосувати міграцію:
 
 alembic upgrade head
 
-5️⃣ Тестування запитів
+- для файлу env.py:
+
+from models import Base
+
+target_metadata = Base.metadata
+
+- для файлу alembic.ini:
+
+[alembic]
+
+script_location = alembic
+
+sqlalchemy.url = postgresql+psycopg2://postgres:1234@localhost:5432/postgres
+
+## 4. Тестування запитів
 
 python test_selects.py
 
-6️⃣ (Опціонально) CLI для CRUD
+## 5. (Опціонально) CLI для CRUD
 
-# Створити нового викладача
+- Створити нового викладача
 
 python main.py -a create -m Teacher -n "Boris Jonson"
 
-# Показати всіх студентів
+- Показати всіх студентів
 
 python main.py -a list -m Student
 
-# Оновити дані групи
+- Оновити дані групи
 
 python main.py -a update -m Group --id 1 -n "AD-102"
 
-# Видалити студента
+- Видалити студента
 
 python main.py -a remove -m Student --id 5
 
-✅ Проект готовий до використання:
+# Проект готовий до використання:
 
-Docker PostgreSQL працює
+- Docker PostgreSQL працює
 
-Таблиці створені
+- Таблиці створені
 
-Дані наповнені Faker
+- Дані наповнені Faker
 
-SQLAlchemy-запити можна тестувати
-
-# Запустити контейнер PostgreSQL
-
-docker run --name postgres_student -p 5432:5432 -e POSTGRES_PASSWORD=1234 -d postgres
-
-# Ініциалізація Alembic:
-
-py -m alembic init alembic
-
-py -m alembic revision --autogenerate -m "Initial"
-
-alembic upgrade head
-
-для env.py:
-
-## from models import Base
-
-## target_metadata = Base.metadata
-
-для alembic.ini:
-
-## [alembic]
-
-## script_location = alembic
-
-## sqlalchemy.url = postgresql+psycopg2://postgres:1234@localhost:5432/postgres
+- Тестувати SQLAlchemy-запити
