@@ -16,7 +16,7 @@ docker ps
 
 ## 2. Підготовка Python середовища
 
-- Встановити залежності
+Встановити залежності:
 
 pip install -r requirements.txt
 
