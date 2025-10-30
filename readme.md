@@ -2,25 +2,25 @@
 
 # Послідовність дій:
 
-1. Запуск PostgreSQL через Docker:
+## 1. Запуск PostgreSQL через Docker:
 
 docker run --name postgres_student -p 5432:5432 -e POSTGRES_PASSWORD=1234 -d postgres
-
-Перевірити, що контейнер працює
-
-- docker ps
 
 - postgres_student — назва контейнера
 
 - 1234 — пароль для користувача postgres
 
-2. Підготовка Python середовища
+Перевірити, що контейнер працює
+
+docker ps
+
+## 2. Підготовка Python середовища
 
 - Встановити залежності
 
 pip install -r requirements.txt
 
-3. Створення бази даних і таблиць
+## 3. Створення бази даних і таблиць
 
 ## Варіант A: без Alembic
 
