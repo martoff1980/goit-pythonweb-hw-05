@@ -4,11 +4,9 @@
 
 1. Запуск PostgreSQL через Docker:
 
-## Запустити контейнер PostgreSQL
-
 docker run --name postgres_student -p 5432:5432 -e POSTGRES_PASSWORD=1234 -d postgres
 
-## Перевірити, що контейнер працює
+Перевірити, що контейнер працює
 
 - docker ps
 
@@ -18,7 +16,7 @@ docker run --name postgres_student -p 5432:5432 -e POSTGRES_PASSWORD=1234 -d pos
 
 2. Підготовка Python середовища
 
-## Встановити залежності
+- Встановити залежності
 
 pip install -r requirements.txt
 
