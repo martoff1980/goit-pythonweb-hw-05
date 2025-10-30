@@ -60,7 +60,7 @@ sqlalchemy.url = postgresql+psycopg2://postgres:1234@localhost:5432/postgres
 
 ## 4. Тестування запитів
 
-python test_selects.py
+python test_select.py
 
 ## 5. (Опціонально) CLI для CRUD
 
