@@ -28,9 +28,9 @@ pip install -r requirements.txt
 
 python seed.py
 
-- seed.py створить таблиці через Base.metadata.create_all(engine)
+- seed.py створить таблиці
 
-- заповнить базу випадковими даними (~30 студентів, 3 групи, 4 викладачі, 6 предметів, оцінки)
+- заповнить базу випадковими даними
 
 ## Варіант з Alembic:
 
