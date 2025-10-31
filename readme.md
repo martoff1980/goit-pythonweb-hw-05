@@ -8,7 +8,9 @@ docker run --name postgres_student -p 5432:5432 -e POSTGRES_PASSWORD=1234 -d pos
 
 - postgres_student — назва контейнера
 
-- 1234 — пароль для користувача postgres
+- 1234 — пароль для користувача
+
+- postgres -ім'я користувача
 
 Перевірити, що контейнер працює
 

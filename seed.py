@@ -24,7 +24,7 @@ def seed_database():
         # Create groups
         groups = []
         for i in range(1, 4):
-            group = Group(name=f"Group {i}")
+            group =Group(name=f"AD-{i+101}") # Group(name=f"Group {i}")
             groups.append(group)
             session.add(group)
         session.commit()
@@ -48,7 +48,7 @@ def seed_database():
 
         # Create students
         students = []
-        for _ in range(30):
+        for _ in range(50):
             student = Student(
                 name=fake.name(),
                 group_id=random.choice(groups).id
